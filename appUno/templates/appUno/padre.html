@@ -34,8 +34,9 @@
         <header class="py-5 bg-light border-bottom mb-4">
             <div class="container">
                 <div class="text-center my-5">
-                    <h1 class="fw-bolder">BIENVENIDO AL BLOG </h1>
-                    <h1 class="fw-bolder">DE LA SCALONETA! </h1>
+                    {% block titulo %} 
+                    {% endblock %}
+                    
                     <p class="lead mb-0">Las mejores estadisticas de Qatar 2022</p>
                 </div>
             </div>
@@ -47,12 +48,16 @@
                 <div class="col-lg-8">
                     <!-- Featured blog post-->
                     <div class="card mb-4">
-                        <a href="#!"><img class="card-img-top" src="https://media.ambito.com/p/115d8026d9449eb0604eda2b3913d7ba/adjuntos/239/imagenes/040/370/0040370089/argentina-campeon-del-mundo-2022-2022-4jpg.jpg" alt="..." /></a>
+                        {% block foto %}
+                        {% endblock %}
+
                         <div class="card-body">
                             <div class="small text-muted">Diciembre 19, 2022</div>
-                            <h2 class="card-title">ARGENTINA CAMPEON MUNDIAL!</h2>
-                            <p class="card-text">La Selección Argentina volvió a coronarse campeón del Mundo luego de 36 años, al vencer en los penales a Francia, en una definición infartarte de la final del Mundial de Qatar 2022. El avión partió de Qatar y en las próximas horas llegará a la Argentina.</p>
-                            <a class="btn btn-primary" href="https://www.ole.com.ar/mundial/mundial-qatar-2022/argentina-francia-final-mundial-vivo-messi_0_5L5mzPlsMc.html">Leer mas →</a>
+                            {% block titulo_foto %}
+                            {% endblock %}
+                            {% block descripcion_foto %}
+                            {% endblock %}
+                          
                         </div>
                     </div>
                     <!-- Nested row for non-featured blog posts-->
@@ -60,46 +65,39 @@
                         <div class="col-lg-6">
                             <!-- Blog post-->
                             <div class="card mb-4">
-                                <a href="#!"><img class="card-img-top" src="https://media.cdn.eldestapeweb.com/eldestape/122022/1670169290630/seleccion-argentina-mundial-qatar-2022-cuartos-de-final-jpg..webp?cw=770&ch=440&extw=jpg" alt="..." /></a>
+                                {% block foto_chica1 %}
+                                {% endblock %}
                                 <div class="card-body">
                                     <div class="small text-muted">Diciembre 19, 2022</div>
-                                    <h2 class="card-title h4">Jugadores</h2>
-                                    <p class="card-text"> Vas a ver las mejores estadisticas de los jugadores en este mundial de qatar 2022.</p>
-                                    <a class="btn btn-primary" href="{% url 'jugadores' %}"> Estadisticas →</a>
+                                  
+
+                                    {% block titulo_foto_chica1 %}
+                                    {% endblock %}
+
+                                    {% block descripcion_foto_chica1 %}
+                                    {% endblock %}
+
                                 </div>
                             </div>
-                            <!-- Blog post-->
-                            <div class="card mb-4">
-                                <a href="#!"><img class="card-img-top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKlU_67vLEMQTczRRMl66J_EgTa1MpqYQXFA&usqp=CAU" alt="..." /></a>
-                                <div class="card-body">
-                                    <div class="small text-muted">Diciembre 19, 2022</div>
-                                    <h2 class="card-title h4">Goles</h2>
-                                    <p class="card-text">Vas a ver las mejores estadisticas de los goles en este mundial de qatar 2022.</p>
-                                    <a class="btn btn-primary" href="{% url 'goles' %}">Estadisticas →</a>
-                                </div>
-                            </div>
+                          
                         </div>
                         <div class="col-lg-6">
                             <!-- Blog post-->
                             <div class="card mb-4">
-                                <a href="#!"><img class="card-img-top" src="https://media.tycsports.com/files/2022/12/18/517235/emiliano-martinez_862x485.webp" alt="..." /></a>
+                                {% block foto_chica2 %}
+                                {% endblock %}
                                 <div class="card-body">
                                     <div class="small text-muted">Diciembre 19, 2022</div>
-                                    <h2 class="card-title h4">Partidos</h2>
-                                    <p class="card-text">Vas a ver las mejores estadisticas de los partidos en este mundial de qatar 2022.</p>
-                                    <a class="btn btn-primary" href="{% url 'partidos' %}">Estadisticas →</a>
+
+
+                                    {% block titulo_foto_chica2 %}
+                                    {% endblock %}
+
+                                    {% block descripcion_foto_chica2 %}
+                                    {% endblock %}
                                 </div>
                             </div>
-                            <!-- Blog post-->
-                            <div class="card mb-4">
-                                <a href="#!"><img class="card-img-top" src="https://agenciafe.com/data/img_cont/img_imagenes/172264.png" alt="..." /></a>
-                                <div class="card-body">
-                                    <div class="small text-muted">Diciembre 19, 2022</div>
-                                    <h2 class="card-title h4">Cuerpo tecnico</h2>
-                                    <p class="card-text">Vas a ver al detalle, a los integrantes.</p>
-                                    <a class="btn btn-primary" href="{% url 'tecnicos' %}">Leer más →</a>
-                                </div>
-                            </div>
+                            
                         </div>
                     </div>
 
