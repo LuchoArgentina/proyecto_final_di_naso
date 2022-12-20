@@ -40,3 +40,20 @@ Convirtio 7 goles en este mundial de Qatar 2022.
 {% block descripcion_foto_chica2 %}
 <p class="card-text"> Atajo 2 penales en la final, convirtiendose en heroe.</p>
 {% endblock %}
+
+
+{% block fomulario %}
+<form action="{% url 'partidos' %}" method="POST"> {% csrf_token %}
+
+    <P>Equipo rival: <input type="text" name="rival"> </P>   
+    <P>Instancia: <input type="text" name="instancia"> </P>  
+    <P>Resultado: <input type="text" name="resultado"> </P>   
+
+    <input type="submit" value="Guardar">
+    
+</form>
+{% endblock %}
+
+{% block mensaje_guardado %}
+<h1> {{ mensaje }} </h1>
+{% endblock %}    

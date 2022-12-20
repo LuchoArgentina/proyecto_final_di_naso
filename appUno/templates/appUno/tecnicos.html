@@ -45,3 +45,20 @@
         <p class="card-text"> Atajo 2 penales en la final, convirtiendose en heroe.</p>
         {% endblock %}
          
+
+        
+{% block fomulario %}
+<form action="{% url 'tecnicos' %}" method="POST"> {% csrf_token %}
+
+    <P>Nombre : <input type="text" name="nombre"> </P>   
+    <P>Apellido: <input type="text" name="apellido"> </P>  
+    <P>Rol: <input type="text" name="rol"> </P>   
+
+    <input type="submit" value="Guardar">
+    
+</form>
+{% endblock %}
+
+{% block mensaje_guardado %}
+<h1> {{ mensaje }} </h1>
+{% endblock %}    

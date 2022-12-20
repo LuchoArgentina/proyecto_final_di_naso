@@ -2,7 +2,7 @@ from django.contrib import admin
 from .models import *
 
 # Register your models here.
-admin.site.register(jugadores)
-admin.site.register(partidos)
-admin.site.register(goles)
-admin.site.register(tecnicos)
+admin.site.register(Jugadores)
+admin.site.register(Partidos)
+admin.site.register(Goles)
+admin.site.register(Tecnicos)
