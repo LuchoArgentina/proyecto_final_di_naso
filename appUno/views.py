@@ -15,3 +15,6 @@ def partidos(request):
 
 def goles(request):
     return render(request, "appUno/goles.html")
+
+def tecnicos(request):
+    return render(request, "appUno/tecnicos.html")
